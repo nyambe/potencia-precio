@@ -14,7 +14,7 @@
     >
       <div
         :class="!macActual.clave ? 'grid-cols-4' : 'grid-cols-8'"
-        class="absolute z-10 grid w-full font-bold text-white bg-black  md:text-5xl bg-opacity-10 top-2 place-items-center"
+        class="absolute z-10 grid w-full font-bold text-white bg-black  rounded-tl-3xl md:text-5xl bg-opacity-10 top-2 place-items-center"
       >
         <button
           @click="accion(item)"
@@ -65,7 +65,7 @@
           class="relative transition-all duration-500 ease-in-out  hover:opacity-90 focus:opacity-90"
         >
           <div
-            class="absolute flex flex-col items-end justify-end w-full h-full text-white bg-black  bg-opacity-40 md:bg-opacity-30"
+            class="absolute flex flex-col items-end justify-end w-full h-full text-white bg-black  rounded-br-3xl bg-opacity-40 md:bg-opacity-30"
           >
             <div
               class="pb-3 pr-1 text-xs text-right  md:p-4 md:text-2xl md:font-extralight"

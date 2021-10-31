@@ -6,6 +6,33 @@
     x tailwind css
     x copiar codigo
     - subirlo a github o netlify? -->
+    <Head lang="es-ES">
+      <Title>Macbook M1 Air 13 14 16 pro potencia / precio </Title>
+      <Meta
+        name="og:title"
+        content="Análisis potencia / precio Macbook Air M1 13 14 16 pro max "
+      />
+      <Meta
+        name="twitter:title"
+        content="Análisis potencia / precio Macbook Air M1 13 14 16 pro max "
+      />
+      <Meta
+        name="description"
+        content="Análisis potencia / precio Macbook Air M1 13 14 16 pro max "
+      />
+      <Meta
+        name="og:description"
+        content="Análisis potencia / precio Macbook Air M1 13 14 16 pro max "
+      />
+      <Meta
+        name="twitter:description"
+        content="Análisis potencia / precio Macbook Air M1 13 14 16 pro max "
+      />
+
+      <Meta name="image" content="/macpotencia.jpg" />
+      <Meta name="og:image" content="/macpotencia.jpg" />
+      <Meta name="twitter:image" content="/macpotencia.jpg" />
+    </Head>
     <ComparadorMacs :items="comparativa" />
   </div>
 </template>
@@ -14,7 +41,6 @@ import "tailwindcss/tailwind.css";
 
 import ComparadorMacs from "./components/ComparadorMacs.vue";
 
-const saludos = "hola como ests";
 const comparativa = [
   {
     mac: "Air",
