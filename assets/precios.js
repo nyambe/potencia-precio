@@ -1,4 +1,3 @@
-// https://www.apple.com/es/shop/mcm/product-price?parts=MBP2021_14,MBP2021_16,MACBOOKAIR2020_MAIN,MBP_MAIN,IMAC_24_MAIN,MACMINI_M1
 export const macs = {
   MACBOOKAIR2020_MAIN: {
     foto: "https://cdn.mos.cms.futurecdn.net/gPvyaz76tASn87RCGuSdDc.jpg",
