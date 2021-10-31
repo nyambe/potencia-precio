@@ -65,10 +65,10 @@
           class="relative transition-all duration-500 ease-in-out  hover:opacity-90 focus:opacity-90"
         >
           <div
-            class="absolute flex flex-col items-end justify-end w-full h-full text-white bg-black  bg-opacity-30"
+            class="absolute flex flex-col items-end justify-end w-full h-full text-white bg-black  bg-opacity-40 md:bg-opacity-30"
           >
             <div
-              class="p-1 text-right md:p-4 md:text-2xl font-extralight"
+              class="pb-3 pr-1 text-xs text-right  md:p-4 md:text-2xl md:font-extralight"
               v-if="item.clave == macActual.clave"
             >
               <div>{{ item.info.price.display.from }}</div>
