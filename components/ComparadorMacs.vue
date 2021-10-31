@@ -54,7 +54,7 @@
         "
       >
         <button
-          v-for="item in items"
+          v-for="(item, i) in items"
           @click="accion(item)"
           :key="item.clave"
           :class="
@@ -78,6 +78,18 @@
                 {{ -item.info.price.value + item.info.precio }}€
               </div>
               <div>Geekbench(Multi) {{ item.info.multi }}</div>
+              <div>
+                potencia comparado con M1 Air
+                <span v-if="i != 0">
+                  +{{
+                    ((item.info.multi / items[0].info.multi - 1) * 100).toFixed(
+                      1
+                    )
+                  }}
+                  %
+                </span>
+                <span v-if="i == 0"> - %</span>
+              </div>
               <div>
                 potencia / precio
                 {{ (item.info.multi / item.info.precio).toFixed(3) }}
@@ -119,10 +131,33 @@
 	</pre
     > -->
     <div class="font-thin text-white">
-      <h1 class="text-xl md:text-3xl">
-        MacBook Air Amazon (8Gb/256Gb) : {{ ofertaAmazon }} €
-      </h1>
-      <div v-if="macActual.clave">
+      <a
+        href="https://amzn.to/3CIIPdi"
+        target="_blank"
+        class="flex items-baseline text-xl text-blue-300 md:text-3xl"
+      >
+        Precio MacBook Air Amazon (8Gb/256Gb) : {{ ofertaAmazon }} €
+        <span class="text-xs text-gray-500 stroke-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3 h-3"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        </span>
+      </a>
+      <div
+        class="transition-all duration-500 ease-in-out"
+        v-if="macActual.clave"
+      >
         diferencia base -{{ -ofertaAmazon + macActual.info.price.value }}€
         <span class="block">
           diferencia (16Gb/512Gb) -{{ -ofertaAmazon + macActual.info.precio }}€
@@ -132,10 +167,13 @@
   </div>
 </template>
 <script setup>
-import { defineProps, ref } from "vue";
+import { defineProps, ref, onMounted } from "vue";
 import { macs } from "../assets/precios";
 const props = defineProps({
   items: Array,
+});
+onMounted(() => {
+  accion(props.items[0]);
 });
 const ofertaAmazon = 997;
 
