@@ -101,7 +101,7 @@
             </div>
           </div>
           <img
-            class="object-cover h-full"
+            class="object-cover h-[360px] md:h-[460px] w-full"
             :src="macs[item.clave].foto"
             :alt="item.mac"
           />
