@@ -4,7 +4,7 @@
       class="
         w-full
         max-w-5xl
-        h-[360px]
+        h-[320px]
         md:h-[460px]
         grid
         bg-black
@@ -41,7 +41,7 @@
         class="
           grid
           gap-1
-          h-[360px]
+          h-[320px]
           md:h-[460px]
           absolute
           mt-1
@@ -101,7 +101,7 @@
             </div>
           </div>
           <img
-            class="object-cover h-[360px] md:h-[460px] w-full"
+            class="object-cover h-[320px] md:h-[460px] w-full"
             :src="macs[item.clave].foto"
             :alt="item.mac"
           />
